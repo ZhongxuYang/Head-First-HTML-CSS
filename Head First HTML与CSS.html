@@ -1,0 +1,919 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="text/css" http-equiv="Content-Style-Type">
+<title>Head First HTML与CSS</title>
+</head>
+<body>
+<h1 align="center" class="root">
+<a name="6ndh62q1185mlqnrklulpekupj">Head First HTML与CSS</a>
+</h1>
+<h2 class="topic">
+<a name="6j76k6p7jg8qa773mu3ab8vmor">1 认识HTML-Web语言</a>
+</h2>
+<h3 class="topic">
+<a name="1a2do3gu5nsec3h37h28tms942">&nbsp;一、HTML结构：</a>
+</h3>
+<h3 class="topic">
+<a name="6fq3v45bnbi776tu2f08ti0hat">&nbsp;&nbsp;1）、元素 = &lt;开始标记&gt; + 内容 + &lt;/结束标记&gt;。</a>
+</h3>
+<h3 class="topic">
+<a name="5skpoh9og58ges1gh74olokfbj">&nbsp;&nbsp;附：有些时候HTML中的开始标记和结束标记并不匹配，但是即使写了不正确的HTML，浏览器却会很好的猜出来你想要表达的内容。。。如果因此你担心自己写的代码不够完美也没关系，这个时候就要用到工具来验证代码。这是一个好习惯。</a>
+</h3>
+<h3 class="topic">
+<a name="7eobon18d3h133tuh6go7bgq59">&nbsp;&nbsp;2）、&lt;!-- 注释 --&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="2gmfdocrjg92p1ng8k462gn9ot">&nbsp;二、CSS表现：</a>
+</h3>
+<h3 class="topic">
+<a name="414vkj02j0ksjvj2fh9d03mnm3">&nbsp;&nbsp;1）、&lt;style&gt;元素</a>
+</h3>
+<h3 class="topic">
+<a name="4dvjtbm2kai1cjd9tg6ke87e3n">&nbsp;&nbsp;&nbsp;1、要增加样式，就需要在页面中增加一个style元素。</a>
+</h3>
+<h3 class="topic">
+<a name="4hs0vr74f38idstapl36jv8949">&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;元素放在HTML的首部（&lt;head&gt;）里。</a>
+</h3>
+<h3 class="topic">
+<a name="51cm9nr3s7vlcueflvenhdabkp">&nbsp;&nbsp;&nbsp;2、为什么要&lt;style type="text/css"&gt;？------------因为从前html的设计者以为以后会有除了css之外的样式出现。不过并没有，所以可以直接使用&lt;style&gt;而不带类型属性。</a>
+</h3>
+<h3 class="topic">
+<a name="14orh3s47hu0mr97t7sbntu7ru">&nbsp;&nbsp;&nbsp;3、CSS中的body{ }表示，{ }中的所有CSS要应用于HTML。</a>
+</h3>
+<h2 class="topic">
+<a name="0ug38okb59m1repl6lqii4l0ah">2 认识HTML中的HT（超文本）</a>
+</h2>
+<h3 class="topic">
+<a name="1lbt13p34eotvro12u0je03jk7">&nbsp;一、写法：&lt;a href="lounge.html"&gt;点击链接进入&lt;/a&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="7pnv6pckegj34vajc32gmrck2d">&nbsp;二、属性的写法都是一样的：首先是属性名，后面是一个等于号，然后是双引号括起来的属性值。</a>
+</h3>
+<h3 class="topic">
+<a name="68m3nnet2psgp9tgifnn2pfaal">&nbsp;三、在创建href时，会追踪页面的路径，如果这个路径是在上一行的文件夹中呢？怎么办？-------------------------可以用一个..来实现。比如：../lounge.html，上行两个文件夹就是../../lounge.html</a>
+</h3>
+<h2 class="topic">
+<a name="3tsvprt6ajqc4ta4aeh225kvu2">3 Web页面建设</a>
+</h2>
+<h3 class="topic">
+<a name="0793mcv1joffi4dq13g9ner0oq">&nbsp;构建模块</a>
+</h3>
+<h3 class="topic">
+<a name="7iaf43u6n3oi2a6l8bbjpan3ut">&nbsp;&nbsp;1、要注意增加页面中的结构和含义是绝！对！有！意！义！的！</a>
+</h3>
+<h3 class="topic">
+<a name="3qpecuj5cqs159df1gkc0oa71n">&nbsp;&nbsp;2、&lt;q&gt;用于段引用，作为现有段落的一部分；内联元素</a>
+</h3>
+<h3 class="topic">
+<a name="2qq4lk037c77hkja3nrm4i3ppl">&nbsp;&nbsp;3、&lt;blockquote&gt;用于长引用，需要单独显示；块元素。</a>
+</h3>
+<h3 class="topic">
+<a name="0d210fs4un56k4t5nc1qn6i5bc">&nbsp;&nbsp;4、不要为了显示的效果就随便运用&ldquo;引用元素&rdquo;。要注意结构的正确性。</a>
+</h3>
+<h3 class="topic">
+<a name="1q9lsgv87116ei8i4enmet7rr3">&nbsp;&nbsp;5、块元素显示时就好像前后各有一个换行；而内联元素总是在一行内出现。</a>
+</h3>
+<h3 class="topic">
+<a name="733uajqmnalelgtou8s3b92apt">&nbsp;&nbsp;6、设计一个页面时，一般先从较大的块元素开始，然后在完善页面时再加入内联元素。</a>
+</h3>
+<h3 class="topic">
+<a name="536qn4bjvb6t8q5jp7ba9s5ahh">&nbsp;&nbsp;7、&lt;br&gt;是void元素/空元素。可以没有结束标记，这是一种简写形式，类似的还有&lt;img&gt;。</a>
+</h3>
+<h3 class="topic">
+<a name="6jlfk9q579vn867jtggebut5ka">&nbsp;&nbsp;8、&lt;ol&gt;有序列表。</a>
+</h3>
+<h3 class="topic">
+<a name="3seqljcd8sujrgc5fdrjstp0te">&nbsp;&nbsp;9、&lt;ul&gt;无序列表。</a>
+</h3>
+<h3 class="topic">
+<a name="7i4kheaehmnds1hc03k0btu9rl">&nbsp;&nbsp;10、&lt;li&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="0bb6ogfq8hgerccs7nh5l2aku8">&nbsp;&nbsp;11、&lt;dl&gt;、&lt;dt&gt;、&lt;dd&gt;是定义列表。</a>
+</h3>
+<h3 class="topic">
+<a name="5o8idcs76r1bnhi7bru2s1r2kj">&nbsp;&nbsp;12、嵌套：把一个元素放在另一个元素中就叫做嵌套。------------HTML页面就是以嵌套的方式构造的。</a>
+</h3>
+<h3 class="topic">
+<a name="0eim3qqvs1tp3510rno7ukgekr">&nbsp;&nbsp;13、特殊字符</a>
+</h3>
+<h3 class="topic">
+<a name="6os1prcba3l2deiusedgadtr50">&nbsp;&nbsp;&nbsp;a.假如希望输入&ldquo;The &lt;html&gt; element rocks.&rdquo;。通过使用字符实体，可以这样输入：The &amp;lt;html&amp;gt; element rocks.</a>
+</h3>
+<h3 class="topic">
+<a name="6223qqilhk4bbmiagb271rbms7">&nbsp;&nbsp;&nbsp;b.如果希望HTML中出现一个&ldquo;&amp;&rdquo;，则可以使用字符实体&amp;amp;，而不要直接使用字符&amp;。</a>
+</h3>
+<h3 class="topic">
+<a name="3vfq5h4mglr2unnhn8bk2f6cqp">&nbsp;&nbsp;&nbsp;c.版权符号是&amp;copyright；</a>
+</h3>
+<h3 class="topic">
+<a name="7j4bvmuvkkjpne9icie1dk1ntg">&nbsp;&nbsp;总结：出现过的元素</a>
+</h3>
+<h3 class="topic">
+<a name="0upuer6qvf4msrpfdmbppj3mbn">&nbsp;&nbsp;&nbsp;&lt;a&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="6tfc9tub2dt1bih7qj1bot5s0f">&nbsp;&nbsp;&nbsp;&lt;q&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="37fo7oip1hum530ujn0il3sna2">&nbsp;&nbsp;&nbsp;&lt;p&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="7nh6trdvo42uue57l25b8imt3t">&nbsp;&nbsp;&nbsp;&lt;code&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="0ii1tb613cc6sk7k0mukbrbmv9">&nbsp;&nbsp;&nbsp;&lt;em&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="7d68eqmbmifek4s5qiv1hci6v5">&nbsp;&nbsp;&nbsp;&lt;time&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="0bf8087f5c5v73qghl6f076299">&nbsp;&nbsp;&nbsp;&lt;ul&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="1all8f51c5n1qgd53s0icit2g3">&nbsp;&nbsp;&nbsp;&lt;ol&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="2vf7i8gjh3k4q2gq4losibcn7v">&nbsp;&nbsp;&nbsp;&lt;li&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="3voj198nr3r9sadji3p0e0su5n">&nbsp;&nbsp;&nbsp;&lt;strong&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="61qajtkksodmi56p1niapasq6a">&nbsp;&nbsp;&nbsp;&lt;pre&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="51k82f8c42unml1quu7n2go7tt">&nbsp;&nbsp;&nbsp;&lt;br&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="06kcuhfdpj4oed6ptuk97v28a4">&nbsp;&nbsp;&nbsp;&lt;img&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="564ueb7v3obnf2jhc3m4h58im2">&nbsp;&nbsp;&nbsp;&lt;blockquote&gt;</a>
+</h3>
+<h2 class="topic">
+<a name="284s91vqhg3beus7bfgm7bln92">4 Web连接</a>
+</h2>
+<h3 class="topic">
+<a name="5i77goh00ka59h1qo0qmu1jbkp">&nbsp;一、默认文件名为index.html或default.htm。（把这个文件放在根目录下，这两种文件名，用哪种取决于Web服务器）</a>
+</h3>
+<h3 class="topic">
+<a name="2t2eig9a7c46nvo44lfkc0i0ve">&nbsp;二、链接页面有两种方法：相对路径和URL。（相对路径只用来连接同一网站内的页面，而URL通常用来连接其他网站）</a>
+</h3>
+<h3 class="topic">
+<a name="556aeu3lfjip663l89skakr0o2">&nbsp;三、title属性：为链接增加标题以便访问。&lt;a&gt;元素有一个title属性，title的值就是对所要链接页面的文本描述。---------------title属性可以为任何元素添加。（鼠标滑动至链接时会浮现title中的内容）</a>
+</h3>
+<h3 class="topic">
+<a name="1lponvpakgl04t7c0qktmfhnh6">&nbsp;四、id属性：使用id属性为&lt;a&gt;创建目标。如：&lt;h2 id="tea"&gt;。使用方法：&lt;a href="index.html#tea"&gt;See Tea&lt;/a&gt;    --------------------------         （配合#，指向id）</a>
+</h3>
+<h3 class="topic">
+<a name="5u5vg1vd2gl9kucojthkihmldd">&nbsp;&nbsp;1、可以为任何元素增加id属性。</a>
+</h3>
+<h3 class="topic">
+<a name="1hbf71spre4sa7l464nj8oa0mt">&nbsp;&nbsp;2、也可以用id具体链接到某个页面中的元素：&lt;a href="index.html#chai"&gt;See Chai Tea&lt;/a&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="42ddfuj9jr8872q4ns0re7id3t">&nbsp;&nbsp;3、id的名字不能加空格。</a>
+</h3>
+<h3 class="topic">
+<a name="578tcvmgo234485dk1oda5r0vj">&nbsp;五、在所有元素中，属性的顺序都不重要。</a>
+</h3>
+<h3 class="topic">
+<a name="651ca9dua8t3dquh4uv2i7dlc3">&nbsp;六、target属性：taget="_blank"---------------------使用新窗口打开。</a>
+</h3>
+<h2 class="topic">
+<a name="6sbemu180ra5k1er79b6a77npn">5 增加图像</a>
+</h2>
+<h3 class="topic">
+<a name="7ga00560vqefthcmdcflp4bv4s">&nbsp;一、&lt;img src="../images/green.jpg"&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="2haqf53t2ss9780lcpal3pp53f">&nbsp;二、使用alt属性为图像添加提示（方便视力障碍的人使用）：</a>
+</h3>
+<h3 class="topic">
+<a name="71kbcfi2b36auj01atjuivtrdi">&nbsp;&nbsp;&lt;img src="../images/green.jpg" alt="这是一张绿色的图片"&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="4uopplp7c2mggbv9bke1q3hdi1">&nbsp;三、可以使用width和height属性调整图像的大小：</a>
+</h3>
+<h3 class="topic">
+<a name="24bchlg83bpsurdacph92t5q0v">&nbsp;&nbsp;1、当然最好不要这么做，调整浏览器中的图像大小已经属于表现的范畴，所以最好是使用CSS来调整。</a>
+</h3>
+<h3 class="topic">
+<a name="1hfrouiop0q023uh1vde9fo4og">&nbsp;&nbsp;2、而且，当使用width和height调整图像大小时，浏览器下载的仍然是大图像，浪费资源。</a>
+</h3>
+<h3 class="topic">
+<a name="479h8ghcu4r82emh6vi1547ihd">&nbsp;&nbsp;3、width和height属性实际上是帮助浏览器确定要为这个图像预留多大的空间的作用。蔬、如果要使用这两个属性，则他们应该与图像的实际宽度和高度一致。</a>
+</h3>
+<h3 class="topic">
+<a name="449ukbgjq86lponv6uemu6kol9">&nbsp;四、JPEG、PNG和GIF的区别：</a>
+</h3>
+<h3 class="topic">
+<a name="2cc639gr570dp0crfugtvjmb38">&nbsp;&nbsp;1、JPEG：可表示1600万种色彩。有损、不支持透明度、不支持动画、文件小。</a>
+</h3>
+<h3 class="topic">
+<a name="1qfj5f9b3ghejd97i9gt9gjqc8">&nbsp;&nbsp;2、PNG：可表示上百万种色彩。无损、支持透明、适合单色图像和线条图像LOGO/剪贴画等、文件大一些。</a>
+</h3>
+<h3 class="topic">
+<a name="02b1akqtc2o84m2o88eieoa6hn">&nbsp;&nbsp;3、GIF：可表示256种色彩。无损、支持透明（只允许一种颜色透明）、支持动画、适合单色图像和线条图像LOGO/剪贴画等、文件大一些。</a>
+</h3>
+<h3 class="topic">
+<a name="232909emksovmeabndjvridr4b">&nbsp;五、善于在主页面用缩略图，可以点击缩略图之后链接一个大图像。因为图像太大，主页打开得会很慢。</a>
+</h3>
+<h3 class="topic">
+<a name="4eqpgl4r25poa6k3s76khq93ol">&nbsp;六、把图像变成链接：</a>
+</h3>
+<h3 class="topic">
+<a name="2jr5khnfp78rf7hhto9js4pjh9">&nbsp;&nbsp;&lt;a href="html/seattle_downtown.html"&gt; &lt;img src="../images/green.jpg" alt="这是一个绿色的图像"&gt; &lt;/a&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="0hqoa5eej1luasbf1t8sjdia0k">&nbsp;七、把一个透明图像放在WEB页面中，要确保图像的蒙版颜色与WEB页面的背景色一致：</a>
+</h3>
+<h3 class="topic">
+<a name="7h3s202klikvuf49fo704l1edk">&nbsp;&nbsp;设置方法：在Photoshop中，使用&ldquo;保存为web&rdquo;对话框中的Matte（蒙版）菜单来选择适合的颜色，并且用反锯齿技术来柔化图像边缘。</a>
+</h3>
+<h2 class="topic">
+<a name="37igd72bek2krdsbojls0mkah3">6 标准及其他&middot;严肃的HTML</a>
+</h2>
+<h3 class="topic">
+<a name="0qtcimpkhekdcg0pgkek4j2mq3">&nbsp;一、&lt;!DOCTYPE html&gt;：</a>
+</h3>
+<h3 class="topic">
+<a name="24at467mlmf2506aq2m123t0sp">&nbsp;&nbsp;*任何时候都一定要以这个开头。用一个doctype告诉浏览器正在使用的html的版本，放在文件的最上面。</a>
+</h3>
+<h3 class="topic">
+<a name="4b1st82abs9o4h8h6kddlcrtht">&nbsp;二、&lt;meta charset="utf-8"&gt;：</a>
+</h3>
+<h3 class="topic">
+<a name="45ieq2l7gnee4omohj2nks4b0m">&nbsp;&nbsp;指定字符编码。注意：指定的字符编码一定要与html文件的编写编码一致。放在&lt;head&gt;的下面。</a>
+</h3>
+<h3 class="topic">
+<a name="4mflsv7uviefvmsegv2d4pm80h">&nbsp;三、只有&lt;head&gt;和&lt;body&gt;元素能直接放在&lt;html&gt;元素中。这说明其它的所有元素都只能放在&lt;head&gt;或&lt;body&gt;中。没有例外！！！</a>
+</h3>
+<h3 class="topic">
+<a name="42bb6l9r0ahb2i7dnsa7c2c0n9">&nbsp;四、一定要在&lt;head&gt;元素中包含一个&lt;title&gt;元素。这是雷打不动的原则。</a>
+</h3>
+<h3 class="topic">
+<a name="23so7jmhqdgabmqc97564tncli">&nbsp;五、&lt;head&gt;元素中只能放置&lt;title&gt;、&lt;meta&gt;和&lt;style&gt;元素。</a>
+</h3>
+<h3 class="topic">
+<a name="0sobden58nqtbpbrp590cu3avl">&nbsp;六、检查属性：有些属性是必要的，有些则是可选的。比如，如果&lt;img&gt;元素没有src属性，就没有了意义，现在你知道了，alt属性也是必要的。</a>
+</h3>
+<h2 class="topic">
+<a name="4sphv7t1esh8eskqcgns229onp">7 CSS入门</a>
+</h2>
+<h3 class="topic">
+<a name="7dus64nkcp0irueg06pdp3ntji">&nbsp;一、注意，在CSS中，不用再名字两边加&lt; &gt;。</a>
+</h3>
+<h3 class="topic">
+<a name="69rqt58rp1far602pechabf41o">&nbsp;二、所有的样式都要放在大括号{ }之间。</a>
+</h3>
+<h3 class="topic">
+<a name="656hfl37sg4qja9ag1dsp7qdd6">&nbsp;三、样式的最后要加分号 ; 。</a>
+</h3>
+<h3 class="topic">
+<a name="0ig8ho5kk5nor3amvjkhcmsaqb">&nbsp;四、在每个CSS规则中可以根据需要增加多个属性和值。</a>
+</h3>
+<h3 class="topic">
+<a name="2e37hs2vfnnrfu5921elbr1r8g">&nbsp;五、CSS比HTML更适合指定样式信息。通过使用一点点的CSS，你可以对HTML建立相当复杂的效果。你还会看到，CSS更有利于处理多个页面的样式。</a>
+</h3>
+<h3 class="topic">
+<a name="0m97mmq7282tvnou0dnad0kdle">&nbsp;六、&lt;style&gt;：</a>
+</h3>
+<h3 class="topic">
+<a name="6vib03ou8mi9et1t67n9bfl73n">&nbsp;&nbsp;1、如果要为HTML直接增加CSS样式，需要在你&lt;head&gt;元素中增加开始和结束style标记。</a>
+</h3>
+<h3 class="topic">
+<a name="576v4brqtc6bknuhk5g35bbqcd">&nbsp;&nbsp;2、所有的CSS规则都放在&lt;stlye&gt;...&lt;/style&gt;中。</a>
+</h3>
+<h3 class="topic">
+<a name="7fcv6qir3hdftciu183td6rf1a">&nbsp;七、为多个元素编写一个规则，只需要在选择器之间将上一个逗号：</a>
+</h3>
+<h3 class="topic">
+<a name="6sh3siultgpfshnt4acp4ouqd2">&nbsp;&nbsp;h1,h2{  color:red;   }</a>
+</h3>
+<h3 class="topic">
+<a name="3jl6g2fkirrl9de370ei5jeeqb">&nbsp;八、在h1,h2{ }的形式中，如果只希望指定h1的颜色为red，希望h2没变化怎么做？</a>
+</h3>
+<h3 class="topic">
+<a name="3j7slu96qc3cos3cstoab419v7">&nbsp;&nbsp;嵌套一个h1{color:red;}规则到h1,h2{}中。浏览器会使用更加明确的指示。</a>
+</h3>
+<h3 class="topic">
+<a name="6ipbdgvtlk1cnh0aulnq2i1nu3">&nbsp;*九、链接外部样式：&lt;link type="text/css" rel="stylesheet" href="lounge.css"&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="66jtmoehriib4849pupn0j0va2">&nbsp;&nbsp;加入link外部样式，就不再需要&lt;style&gt;&lt;/style&gt;元素。&lt;link&gt;直接放到&lt;head&gt;&lt;/head&gt;中。</a>
+</h3>
+<h3 class="topic">
+<a name="0a7e3acps48jd2075vlvi53ap4">&nbsp;&nbsp;rel="stylesheet"是指告诉HTML插入的是一个样式文件。</a>
+</h3>
+<h3 class="topic">
+<a name="0stcku86o75ek9hnk1kvglq7ed">&nbsp;十、要在CSS中写注释，只需要把内容包围在/*和*/之间。</a>
+</h3>
+<h3 class="topic">
+<a name="6fndj5iuhqq5bq8v12jj15bsim">&nbsp;十一、类（class）：</a>
+</h3>
+<h3 class="topic">
+<a name="1e3a5fnvvuoicebo945asuk97o">&nbsp;&nbsp;1、如何单独选择一个元素，运用class。</a>
+</h3>
+<h3 class="topic">
+<a name="2kugmsb5r0n2kqck4gkrnrrd51">&nbsp;&nbsp;2、类选择器：元素.类名{ }</a>
+</h3>
+<h3 class="topic">
+<a name="4buk3d1scutno48ptvum75cp47">&nbsp;&nbsp;3、一个元素可以加入多个类。用空格断开。</a>
+</h3>
+<h3 class="topic">
+<a name="4t4k37cnijghl47h7tr0k7inc3">&nbsp;总结：</a>
+</h3>
+<h3 class="topic">
+<a name="6jekjafg04d91gmtorap931nm3">&nbsp;&nbsp;1、背景色：background-color:#666666;</a>
+</h3>
+<h3 class="topic">
+<a name="6u4d5nv29ttfbtr28u35ftncom">&nbsp;&nbsp;2、背景图像：background-image:url(images/background.gif);</a>
+</h3>
+<h3 class="topic">
+<a name="7oa5rha5ve305am2f8t52th9nr">&nbsp;&nbsp;3、字体：font-family:</a>
+</h3>
+<h3 class="topic">
+<a name="2edusvg5ngipb9b300akbgstep">&nbsp;&nbsp;4、字体大小：font-size:</a>
+</h3>
+<h3 class="topic">
+<a name="2256qmjdfl4bieg4vhje7uk8mk">&nbsp;&nbsp;&nbsp;small;</a>
+</h3>
+<h3 class="topic">
+<a name="396f5dh6qgqjifcruek7e7j7cb">&nbsp;&nbsp;&nbsp;medium;</a>
+</h3>
+<h3 class="topic">
+<a name="7d8vm3q6eqm99gj15tedoh78d7">&nbsp;&nbsp;&nbsp;large;</a>
+</h3>
+<h3 class="topic">
+<a name="4n5i4opojl293sn8rhm35megf0">&nbsp;&nbsp;5、字体粗细：font-weight:</a>
+</h3>
+<h3 class="topic">
+<a name="2ohfpepbmbmspi6lv1mas5v8f1">&nbsp;&nbsp;&nbsp;blod;</a>
+</h3>
+<h3 class="topic">
+<a name="1hkftf166ov6u3l0n9ct3c51se">&nbsp;&nbsp;&nbsp;normal;</a>
+</h3>
+<h3 class="topic">
+<a name="18toln5mjaq0g2mgac899aqeq4">&nbsp;&nbsp;6、斜体：font-style:italic;</a>
+</h3>
+<h3 class="topic">
+<a name="66301qq5ta9rqofscpe6mimot8">&nbsp;&nbsp;7、字体色：color:</a>
+</h3>
+<h3 class="topic">
+<a name="5ra5g8bijaa9iju1rc8irrrhrv">&nbsp;&nbsp;8、字母之间的间距：letter-spacing:</a>
+</h3>
+<h3 class="topic">
+<a name="7c89m4docf2b8kfcvq32pk56sc">&nbsp;&nbsp;9、文本对齐：font-align:</a>
+</h3>
+<h3 class="topic">
+<a name="7u1uaos4a6bh649odnk23hpn9l">&nbsp;&nbsp;&nbsp;left</a>
+</h3>
+<h3 class="topic">
+<a name="2sleqgp0ltm9pf73s5anh5lef7">&nbsp;&nbsp;&nbsp;right</a>
+</h3>
+<h3 class="topic">
+<a name="6sobe3jtgpj8c8hu0qmq1boma9">&nbsp;&nbsp;&nbsp;center</a>
+</h3>
+<h3 class="topic">
+<a name="3f7hq6mtki60bbo3lrl56lcn6h">&nbsp;&nbsp;10、行高：line-height:1.6em;</a>
+</h3>
+<h3 class="topic">
+<a name="0fmosgb98fi7btg65ejjh17qna">&nbsp;&nbsp;11、内边距：padding:25px;</a>
+</h3>
+<h3 class="topic">
+<a name="3tetfp16h41g7snsdm3k8hjheh">&nbsp;&nbsp;12、外边距：margin:30px;</a>
+</h3>
+<h3 class="topic">
+<a name="0ur0858e45rp8mupsj1nb54ibn">&nbsp;&nbsp;13、边框：border:thin solid gray;</a>
+</h3>
+<h3 class="topic">
+<a name="3s3umq1b2p6cg9jk7lhfacngp8">&nbsp;&nbsp;14、下边框：border-bottom:1px solid black;</a>
+</h3>
+<h3 class="topic">
+<a name="5f3b4i2bhmo3138i1c07cj6csv">&nbsp;&nbsp;15、划线：text-decoration:</a>
+</h3>
+<h3 class="topic">
+<a name="0fplllbejd389q5lbnbg3av6o5">&nbsp;&nbsp;&nbsp;none; 无</a>
+</h3>
+<h3 class="topic">
+<a name="5npgf44v1ij2haqcmrgpv36udi">&nbsp;&nbsp;&nbsp;line-through; 删除线</a>
+</h3>
+<h3 class="topic">
+<a name="30bjav0t1tkckdhvqv6ncjnu0d">&nbsp;&nbsp;&nbsp;overline/underline; 上/下划线</a>
+</h3>
+<h2 class="topic">
+<a name="0b6vc94oacmac3n5odfmpr10vr">8 增加字体和颜色样式</a>
+</h2>
+<h2 class="topic">
+<a name="50ifgumsmg8jes4agc3kkksu0l">9 盒模型</a>
+</h2>
+<h3 class="topic">
+<a name="4jc1qaprochp927fhlm4dshcme">&nbsp;一、从CSS的角度看，每个元素就是一个盒子。</a>
+</h3>
+<h3 class="topic">
+<a name="5gi2rg34cletssdqtf42glqict">&nbsp;&nbsp;1、盒子：</a>
+</h3>
+<h3 class="topic">
+<a name="2vfblkgaam58pl1mbdien54cm0">&nbsp;&nbsp;&nbsp;（1）、内容区content area</a>
+</h3>
+<h3 class="topic">
+<a name="5fal87mqpq1qngv7r3pf8a6jgp">&nbsp;&nbsp;&nbsp;（2）、内边距padding</a>
+</h3>
+<h3 class="topic">
+<a name="4m4r21k7co2hrrm1kojgrs6j8m">&nbsp;&nbsp;&nbsp;（3）、边框border</a>
+</h3>
+<h3 class="topic">
+<a name="5ed06eqbskbp9b6dp6vk9qragn">&nbsp;&nbsp;&nbsp;（4）、外边距margin</a>
+</h3>
+<h3 class="topic">
+<a name="1f4d6ufk5kglfhuv40e2841qb7">&nbsp;&nbsp;2、所有元素都被当做盒子：段落、标题、块引用、列表、列表项等。甚至内联元素（如&lt;em&gt;和链接）在CSS看来都是盒子。</a>
+</h3>
+<h3 class="topic">
+<a name="29m59eugif46vn0m8p1c95g8gi">&nbsp;二、修正背景图像：</a>
+</h3>
+<h3 class="topic">
+<a name="27i983ej9s2i75f4fciersan1b">&nbsp;&nbsp;background-repeat:no-repeat;   图像不重复</a>
+</h3>
+<h3 class="topic">
+<a name="0g06f71k6apeutlfijjembacpf">&nbsp;&nbsp;&nbsp;no-repeat;</a>
+</h3>
+<h3 class="topic">
+<a name="3uri8ld0kti0ic3sva71uqk6t8">&nbsp;&nbsp;&nbsp;repeat-x;</a>
+</h3>
+<h3 class="topic">
+<a name="7mgmkecov5e10qm1dsjd9h80ka">&nbsp;&nbsp;&nbsp;repeat-y;</a>
+</h3>
+<h3 class="topic">
+<a name="19m64a5jtcdqk044t3r2o5k1m2">&nbsp;&nbsp;&nbsp;inherit;按父元素处理</a>
+</h3>
+<h3 class="topic">
+<a name="14a12dnvijv5tvj1c8bu2l1a59">&nbsp;&nbsp;background-position:top left;   在左上角</a>
+</h3>
+<h3 class="topic">
+<a name="25een93u87uhdgs6u8rqj3frk2">&nbsp;&nbsp;&nbsp;top;</a>
+</h3>
+<h3 class="topic">
+<a name="0tfkhg9i6dajr3o72iodvv02ku">&nbsp;&nbsp;&nbsp;left;</a>
+</h3>
+<h3 class="topic">
+<a name="0sfjnjimpsppjtvn1tf99ah8fk">&nbsp;&nbsp;&nbsp;right;</a>
+</h3>
+<h3 class="topic">
+<a name="7ijv1qhj8lom3e461dc0go6bjp">&nbsp;&nbsp;&nbsp;bottom;</a>
+</h3>
+<h3 class="topic">
+<a name="7bq0fp9c3vahn795bgj1gigfaf">&nbsp;&nbsp;&nbsp;center;</a>
+</h3>
+<h3 class="topic">
+<a name="0q30lsduvndnbnak3cb3ll9c9q">&nbsp;三、如何只在左边增加内边距？</a>
+</h3>
+<h3 class="topic">
+<a name="024fr8qda69igojrkhqin4lvm2">&nbsp;&nbsp;padding-left:80px;</a>
+</h3>
+<h3 class="topic">
+<a name="2t3i5uqk528gea2ilc9fdst1ef">&nbsp;四、边框样式border-style:</a>
+</h3>
+<h3 class="topic">
+<a name="2ac24app37pdcqjof7gm7eavnt">&nbsp;&nbsp;solid;实线</a>
+</h3>
+<h3 class="topic">
+<a name="3vtlspcietbuhejndqt8v5tngv">&nbsp;&nbsp;double;双线</a>
+</h3>
+<h3 class="topic">
+<a name="54dkgtgn1n4dl7lia3ocf0frdg">&nbsp;&nbsp;groove;槽线</a>
+</h3>
+<h3 class="topic">
+<a name="6utr2md0kluldfcstsbr3350rb">&nbsp;&nbsp;outset;外凸线</a>
+</h3>
+<h3 class="topic">
+<a name="594b6i7r1pj3n6tvq890979h62">&nbsp;&nbsp;dotted;虚线</a>
+</h3>
+<h3 class="topic">
+<a name="7a6mkn0742giiq0i3mal5b9067">&nbsp;&nbsp;dashed;破折线</a>
+</h3>
+<h3 class="topic">
+<a name="24ip1r9a333e26i7hqja1ge3nl">&nbsp;&nbsp;inset;内凹线</a>
+</h3>
+<h3 class="topic">
+<a name="5972vcofjhp67nhv3q4l2e7g4u">&nbsp;&nbsp;ridge;脊线</a>
+</h3>
+<h3 class="topic">
+<a name="4e51op9h5htn04nu9muom836h0">&nbsp;五、边框宽度border-width:</a>
+</h3>
+<h3 class="topic">
+<a name="1uedhbvfhtlhsmr6imviqnjg0p">&nbsp;&nbsp;thin;</a>
+</h3>
+<h3 class="topic">
+<a name="1q1h3if7rgdtdc0k6b8858kvqd">&nbsp;&nbsp;5px;</a>
+</h3>
+<h3 class="topic">
+<a name="41vg29putqnhramgo08na226j4">&nbsp;六、边框颜色border-color:</a>
+</h3>
+<h3 class="topic">
+<a name="2ne7ba6us3e225i7osm2taj44g">&nbsp;&nbsp;red;</a>
+</h3>
+<h3 class="topic">
+<a name="25p7qe66rvddebcvnshefuotbn">&nbsp;&nbsp;rgb(100%,0%,0%);</a>
+</h3>
+<h3 class="topic">
+<a name="18ah3vpts3v6d0jio35aa69iae">&nbsp;&nbsp;#ff0000;</a>
+</h3>
+<h3 class="topic">
+<a name="0psdpiijubo9lfqh7fjj9p9o59">&nbsp;七、指定某一个边的边框：</a>
+</h3>
+<h3 class="topic">
+<a name="7j5pucqberdvm05i5jl8ql2i4t">&nbsp;&nbsp;border-top-color:</a>
+</h3>
+<h3 class="topic">
+<a name="151dq4l9d2autjpqtknoefti30">&nbsp;八、指定圆角边框：</a>
+</h3>
+<h3 class="topic">
+<a name="68e7jmqnkm7j8rtfcoha96l54s">&nbsp;&nbsp;border-radius:15px;</a>
+</h3>
+<h3 class="topic">
+<a name="2ek783ljjtdt5mp36i1538gpbn">&nbsp;九、想要对多个元素使用某个样式时，就要用到class。但是如果只有一个元素需要增加样式，或者页面上只有一个元素，那就应该使用id。id属性恰恰就是用来唯一地命名元素。（id元素的选择器配合#选择）</a>
+</h3>
+<h3 class="topic">
+<a name="75nm723hoa7ljqfqeutuopeu00">&nbsp;十、使用多个样式表：</a>
+</h3>
+<h3 class="topic">
+<a name="1uqkhb0i7ha56msbunig7suve1">&nbsp;&nbsp;1、在你的HTML中，可以指定多个样式表。排放顺序很要！一个样式表会覆盖在它上面链接的样式表中的样式。最下面的最优先。</a>
+</h3>
+<h3 class="topic">
+<a name="5c0cmf6h4eh5a3hfb82ed4jqfo">&nbsp;&nbsp;2、之所以希望有多个样式表还有一个原因：你可能想针对将要显示页面的设备类型（如PC，手机、平板）来调整页面的样式。要做到这一点，可以利用一个media属性，在&lt;link&gt;元素中增加这个属性，只使用适用于指定设备的样式文件。</a>
+</h3>
+<h3 class="topic">
+<a name="75goe875ukp1jtorsv0h7r2441">&nbsp;&nbsp;&nbsp;如：&lt;link href="lounge.css" rel="stylesheet" media="screen and (max-device-width:480px)"&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="48mt2e09grt8e5s0hto3f58bp7">&nbsp;十一、要为不同的媒体类型和特征制定不同的CSS规则，使用&lt;link&gt;还是@media，哪一个更好？</a>
+</h3>
+<h3 class="topic">
+<a name="7kleathfo8eus78u05i4frcr0e">&nbsp;&nbsp;答：这两个都行。不过要注意，如果把所有规则都放在一个文件中，再使用@media规则将它们分开，你的CSS会变得非常庞大。所以，建议使用&lt;link&gt;元素来指定不同的样式。</a>
+</h3>
+<h3 class="topic">
+<a name="7nuec31n5d5gjn8su8g9kfbppm">&nbsp;十二、知识点：</a>
+</h3>
+<h3 class="topic">
+<a name="47u81lrlvkophetb4mi6m4gmqp">&nbsp;&nbsp;1、CSS使用一个盒模型来控制元素如何显示。</a>
+</h3>
+<h3 class="topic">
+<a name="72u0tq4u7h1h8c63vtgq4vsake">&nbsp;&nbsp;2、内边距、边框、外边距都是可选的。</a>
+</h3>
+<h3 class="topic">
+<a name="5eiidl2fk6n1fen54vduspanfv">&nbsp;&nbsp;3、元素的北京会在内容和内边距下显示，但不会延伸到外边距下面。</a>
+</h3>
+<h3 class="topic">
+<a name="312gbqpvsakaa75a0uu375fedu">&nbsp;&nbsp;4、内边距和外边距大小可以用像素或百分数设置。</a>
+</h3>
+<h3 class="topic">
+<a name="72pn25ncq8e8ds6mjv84f6m51t">&nbsp;&nbsp;5、边框宽度也可以用像素设置，也可以使用关键词thin/medium/thick来指定。</a>
+</h3>
+<h3 class="topic">
+<a name="3g4c35d2qul2e2hogembtoufrf">&nbsp;&nbsp;6、如果两个样式表包含冲突的属性定义，HTML文件中最后链接的样式表最为优先。</a>
+</h3>
+<h3 class="topic">
+<a name="63o9jfqi34p8a90c1u80jvrgge">&nbsp;&nbsp;7、可以在&lt;link&gt;元素中使用媒体查询或者使用CSS中的@media规则来指定设备。</a>
+</h3>
+<h2 class="topic">
+<a name="28vpoio0rre7o8glav2qoffq1f">10 div与span</a>
+</h2>
+<h3 class="topic">
+<a name="415rs0u0d1avdvsbruuvuivre7">&nbsp;（一）、&lt;div&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="3gn8337iutunu978bq7630ua6c">&nbsp;&nbsp;一、利用&lt;div&gt;和&lt;span&gt;，你能构建重要的支撑架构，一旦有了这些架构，就能用各种新颖、强大的方式为他们增加样式。</a>
+</h3>
+<h3 class="topic">
+<a name="4h0730bpqjeovr616lucas20et">&nbsp;&nbsp;二、这一章还会学到伪类（pseudo-classes），利用它们可以创建一些非常有趣的选择器。</a>
+</h3>
+<h3 class="topic">
+<a name="54amn0evl6cfsub1sofod1n4bc">&nbsp;&nbsp;三、使用&lt;div&gt;标记逻辑区：</a>
+</h3>
+<h3 class="topic">
+<a name="5jia165ivb19v4uhg712ehe0na">&nbsp;&nbsp;&nbsp;1、可以使用一个id属性为&lt;div&gt;提供一个唯一的标签。例如：&lt;div id="dogs"&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="5lt4k4jurg6nl52vsa7kbac43u">&nbsp;&nbsp;&nbsp;2、增加样式：#dogs{   background-color:green;   }</a>
+</h3>
+<h3 class="topic">
+<a name="1kj4bru0tggolcje80shjsfb4i">&nbsp;&nbsp;&nbsp;3、展现更多结构：通过&lt;div&gt;增加结构甚至还可以帮助你重新思考你的页面设计。比如，在各个&lt;div&gt;中单出来一个&lt;p&gt;，那么这个&lt;p&gt;真的需要放在这里吗？</a>
+</h3>
+<h3 class="topic">
+<a name="1f1h12fbaecc996ltkjs6fabvl">&nbsp;&nbsp;&nbsp;4、在结构上增加结构：嵌套结构是很常见的。</a>
+</h3>
+<h3 class="topic">
+<a name="21gdv0nsjqc2uksn99ee84e9em">&nbsp;&nbsp;&nbsp;5、实际上，我们通常把&lt;div&gt;描述为&ldquo;容器&ldquo;。他们不仅相当于逻辑容器，用来将一堆的相关的元素放在一起，另外对&lt;div&gt;指定样式和定位时还相当于图形容器。</a>
+</h3>
+<h3 class="topic">
+<a name="02lgte53pobh2maskpv5111icj">&nbsp;&nbsp;&nbsp;6、不要为了增加结构而不必要的增加结构。一定要在保证完成任务的前提下让结构尽可能简单。</a>
+</h3>
+<h3 class="topic">
+<a name="5cpbbr9kjjag04qnf154kdkust">&nbsp;&nbsp;四、&lt;div&gt;盒子的宽度：</a>
+</h3>
+<h3 class="topic">
+<a name="01b9ms7d7d3cq0n00jc4q0dc6h">&nbsp;&nbsp;&nbsp;1、总宽度 = 内容区的宽度 + 左和右的内边距 + 左和右的外边距 + 边框宽度*2</a>
+</h3>
+<h3 class="topic">
+<a name="3c8kthab2ld44fi60n6mqnd67c">&nbsp;&nbsp;&nbsp;2、width属性只指定内容区的宽度。</a>
+</h3>
+<h3 class="topic">
+<a name="36441itg91lqdcgivkos8fsk8n">&nbsp;&nbsp;五、&lt;div&gt;的默认内边距为0px。</a>
+</h3>
+<h3 class="topic">
+<a name="0r0o964o83t1jsgdn9tuno9a3s">&nbsp;&nbsp;六、text-align会对块元素中的所有内联内容对齐。text-align属性只能在块元素上设置。如果直接在内联元素上使用，则不起作用。</a>
+</h3>
+<h3 class="topic">
+<a name="2cu0te6sfrf386d634uss1kd25">&nbsp;&nbsp;七、子孙选择器：</a>
+</h3>
+<h3 class="topic">
+<a name="1ki02s8473t1nb634i8322kv1m">&nbsp;&nbsp;&nbsp;div h2{ }</a>
+</h3>
+<h3 class="topic">
+<a name="710m14lvmv1o8g70lvle7t2qfj">&nbsp;&nbsp;&nbsp;#elixirs h2{ }</a>
+</h3>
+<h3 class="topic">
+<a name="4vrot2odjormo0fvr50aepkklc">&nbsp;（二）、&lt;span&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="2g68um1gc8altmmnid5mksi3d0">&nbsp;&nbsp;一、类似于&lt;div&gt;的元素，不过&lt;span&gt;是针对内联元素的。</a>
+</h3>
+<h3 class="topic">
+<a name="3ck70hahu7p3ft00bh10i9romo">&nbsp;（三）、伪类</a>
+</h3>
+<h3 class="topic">
+<a name="4fi8d9udsmc4f476skg0pkd4rp">&nbsp;&nbsp;一、伪类就好像是类一样，可以为他们指定样式，但是没有人在HTML中真正的输入这些类。</a>
+</h3>
+<h3 class="topic">
+<a name="5bssc9ajdeuf5oeks89efjoceu">&nbsp;&nbsp;二、&lt;a&gt;的伪类：</a>
+</h3>
+<h3 class="topic">
+<a name="0pm44j02u92ju3v5qu5oi6n2jn">&nbsp;&nbsp;&nbsp;a:link{ } 未访问的状态</a>
+</h3>
+<h3 class="topic">
+<a name="7u04dn4i9jpf5pmr6v4msr7mc3">&nbsp;&nbsp;&nbsp;a:visited{ } 已访问状态</a>
+</h3>
+<h3 class="topic">
+<a name="6ai2najq8nnmbst0rcibdv8kha">&nbsp;&nbsp;&nbsp;a:hover{ } 悬停状态</a>
+</h3>
+<h3 class="topic">
+<a name="1854cm9gi5uel2amkfrqgaairi">&nbsp;&nbsp;三、first-child对应元素的第一个子元素。</a>
+</h3>
+<h3 class="topic">
+<a name="5nsqdvhfne045u7c0ubnq1b110">&nbsp;（四）、层叠</a>
+</h3>
+<h3 class="topic">
+<a name="08fojfn08nkbhmoakjk50094md">&nbsp;&nbsp;一、浏览器确定要对一个元素应用哪个样式时，它会使用所有这些样式表。最优先的是坐着的样式表，然后的读者的样式表，最后才是浏览器的默认样式。</a>
+</h3>
+<h3 class="topic">
+<a name="0s73ldomfgjmtmmpuhkf5v3be5">&nbsp;&nbsp;二、读者可能在他的CSS属性上加上!important，如果是这样，排序时这些属性最为优先。</a>
+</h3>
+<h2 class="topic">
+<a name="2cr8o7nmkom3l80bvma3u5n57a">11 布局与定位</a>
+</h2>
+<h3 class="topic">
+<a name="4dc70aflisfgse6d2kqgop8ak3">&nbsp;一、浮动布局：float:right;</a>
+</h3>
+<h3 class="topic">
+<a name="5ne96neharmpmti58dugtg3adk">&nbsp;&nbsp;1、关于float：float属性首先尽可能远的向左或者向右浮动一个元素。然后它下面的所有内容会绕流这个元素。</a>
+</h3>
+<h3 class="topic">
+<a name="2qg1fb9mm2sld1grfm0ioo8f2c">&nbsp;&nbsp;2、宽度：width:200px;</a>
+</h3>
+<h3 class="topic">
+<a name="02mbmc9oasbgrm1j5g7f0o1o01">&nbsp;&nbsp;3、&ldquo;流&rdquo;的定义。</a>
+</h3>
+<h3 class="topic">
+<a name="43av2a0o089md4n3qlu68mig87">&nbsp;&nbsp;4、当浏览器并排放至两个元素时：如果左边的元素外边距为10px，右边的元素外边距为20px，那么这两个元素之间就会有30px的空间。</a>
+</h3>
+<h3 class="topic">
+<a name="07mcbpvhbaoql7mbhomn08s22d">&nbsp;&nbsp;5、当浏览器上下放置两个元素时：会折叠他们的外边距。（他们共同的外边距为两个外边距中较大的那么外边距的大小）</a>
+</h3>
+<h3 class="topic">
+<a name="7bsdh2aj20lsg41dl4hc2f5nmd">&nbsp;&nbsp;6、内联元素也可以有外边距。不过通常不会设置内联元素的外边距，只有一个例外，就是图像。对于图像，通常不仅会设置外边距，还会设置内边距和边框，这是很常见的。</a>
+</h3>
+<h3 class="topic">
+<a name="75u9mp7beiku7fpao31gbid62o">&nbsp;&nbsp;*如何设置一个浮动元素：</a>
+</h3>
+<h3 class="topic">
+<a name="5arc4e31c3t33drn2bgvuroveb">&nbsp;&nbsp;&nbsp;1、首先指定一个标识（id）。</a>
+</h3>
+<h3 class="topic">
+<a name="5njsr1q3a4mnou8mc4jml47ajf">&nbsp;&nbsp;&nbsp;2、然后指定一个宽度（width）。</a>
+</h3>
+<h3 class="topic">
+<a name="1eqgvli2rofc4mbn809c43rmsu">&nbsp;&nbsp;&nbsp;3、最后设置浮动。（float：left或right；）</a>
+</h3>
+<h3 class="topic">
+<a name="60113q885ss88t8em8tu8nh03r">&nbsp;&nbsp;&nbsp;*浮动一个元素时，如果希望他在摸个元素的后面，就要移动浮动元素的html，让他紧挨着要放得元素的后面。</a>
+</h3>
+<h3 class="topic">
+<a name="2ab0jlunb7fkp3ev3dlk21m7lt">&nbsp;&nbsp;7、通过设置外边距（margin：）来解决浮动元素与流的重合问题。</a>
+</h3>
+<h3 class="topic">
+<a name="4sjl8j7r70bqbeif1ik4tsoh23">&nbsp;&nbsp;8、解决浮动元素与页脚的重叠问题用&ldquo;clear:right或left;&rdquo;</a>
+</h3>
+<h3 class="topic">
+<a name="5bs8qhr0f1mqnuerunghdbl3i0">&nbsp;&nbsp;9、运用伪类：为链接的不同状态指定样式，如：</a>
+</h3>
+<h3 class="topic">
+<a name="17tkeokg4c0f4lqlhi3keq7e5d">&nbsp;&nbsp;&nbsp;a:link {  color:#b76666;        text-decoration:none;            border-bottom:thin dotted #b76666; }</a>
+</h3>
+<h3 class="topic">
+<a name="02ds96m53g8f0k90junhin94h0">&nbsp;&nbsp;&nbsp;a:visited {  color:#675c47;     text-decoratin:none;     border-bottom:thin dotted #675c47; }</a>
+</h3>
+<h3 class="topic">
+<a name="2tq7t64dqh0ko49upahr2ef6k2">&nbsp;--------------------------------------------------------------------------------------------------------------------*在此之前，我们所采用的所有设计都称为&ldquo;流体布局&rdquo;。因为不论我们将浏览器调整到多大的宽度，布局都会拓展，填满整个浏览器。*----------------------------------------------------------------------------------------------------------------</a>
+</h3>
+<h3 class="topic">
+<a name="6j7mq2gb9jlem8nmongv64515p">&nbsp;二、流体与冻结设计：</a>
+</h3>
+<h3 class="topic">
+<a name="7es94nvp19smqs0pq0sfsm646p">&nbsp;&nbsp;1、HTML修改：在html中要增加一个新的&lt;div&gt;元素，并指明id。顾名思义，这个元素要包含页面中的所有内容。</a>
+</h3>
+<h3 class="topic">
+<a name="4h8hsjo1vsfs1dabrs8vprbunm">&nbsp;&nbsp;2、CSS修改：我们要限制这个id的&lt;div&gt;中所有的元素和内容大小，使他们有一个固定的宽度。（也可设置内边距/背景色等）</a>
+</h3>
+<h3 class="topic">
+<a name="2ja9o95flm9bm3dvic72tm2r9p">&nbsp;&nbsp;*经过以上的设计，就叫&ldquo;冻结布局&ldquo;，不论浏览器怎么调整大小，他都不会再移动。</a>
+</h3>
+<h3 class="topic">
+<a name="7qedjmouvts40gv3mtv0vvd2rt">&nbsp;三、凝胶布局（是流体和冻结之间的状态）：</a>
+</h3>
+<h3 class="topic">
+<a name="7q00flrq30d7rn0nj2mshd86g7">&nbsp;&nbsp;*凝胶布局会锁定页面中内容区的宽度，不过会将它在浏览器中居中*</a>
+</h3>
+<h3 class="topic">
+<a name="79b1ng0ifv1b50gitt5hoht0rt">&nbsp;&nbsp;设置方法首先有一个固定大小的&lt;div&gt;包围页面中的所有内容，然后只需在CSS中的id{ }中加入：margin-left:auto;和margin-right:auto;即可</a>
+</h3>
+<h3 class="topic">
+<a name="11plt02gq5ulbuk471grno7dit">&nbsp;四、绝对布局：（一个元素绝对定位时，浏览器首先要做的是将它从流中完全删除，然后浏览器将这个元素放置在top/bottom和right/left属性指定的位置上）</a>
+</h3>
+<h3 class="topic">
+<a name="3r23395il37nmoj6dupsmrfiru">&nbsp;&nbsp;1、首先我们使用position:absolute;属性指定这个元素要绝对定位。</a>
+</h3>
+<h3 class="topic">
+<a name="25oul1vr9hofhg1q4ju5o6k7a3">&nbsp;&nbsp;2、接下来设置top/bottom和right/left属性。</a>
+</h3>
+<h3 class="topic">
+<a name="2tpaok51r9b4tk4shn91fjsv1d">&nbsp;&nbsp;3、最后为&lt;div&gt;设置一个宽度。</a>
+</h3>
+<h3 class="topic">
+<a name="3drubevrbp0qoh8mdbpgv6boj0">&nbsp;&nbsp;*流中的元素不会将其内联元素内容围绕在一个绝对定位元素周围。他们完全不知道页面上有这个绝对定位的元素。</a>
+</h3>
+<h3 class="topic">
+<a name="1mkg1587pbgeoo0pivv7h78u8s">&nbsp;&nbsp;*谁在上面？</a>
+</h3>
+<h3 class="topic">
+<a name="7ppn674o5jicgtbtam4hgchoc7">&nbsp;&nbsp;&nbsp;每个定位元素都有一个名为z-index的属性，这会指定它在一个虚拟z轴上的位置（上面的元素&ldquo;更靠近&rdquo;你，z-index更大）。</a>
+</h3>
+<h3 class="topic">
+<a name="7rfaou35q367js3dom767l5365">&nbsp;五、CSS表格显示：</a>
+</h3>
+<h3 class="topic">
+<a name="7du0pjgu8chhu616va34ta6eam">&nbsp;&nbsp;1、注意：由于我们在表格中只能放置块元素，所以要把内容包围在&lt;div&gt;中。</a>
+</h3>
+<h3 class="topic">
+<a name="3g15a8bk0kc6tntkr2istj3ucp">&nbsp;&nbsp;2、表格会自动扩展来适应单元格宽度和高度。</a>
+</h3>
+<h3 class="topic">
+<a name="1aongodvvap9bbkv66s41hr61d">&nbsp;&nbsp;3、如何创建CSS和HTML实现表格显示：</a>
+</h3>
+<h3 class="topic">
+<a name="5v455o0gpm16qsr27oucocu2bb">&nbsp;&nbsp;&nbsp;不难想到，我们需要增加CSS，告诉浏览器要把我们的栏目显示的像一个表格，不过还需要增加一些HTML。为什么？我们需要增加一些结构来表示行和列，还要增加这个表格本身的结构。</a>
+</h3>
+<h3 class="topic">
+<a name="3i23oards5kemtm0vlut19ghi7">&nbsp;&nbsp;&nbsp;*做法很简单，只需要为整个表格创建一个&lt;div&gt;，然后为每一行分别创建一个&lt;div&gt;。对于每一列，只需要在行&lt;div&gt;中放置一个块级元素*</a>
+</h3>
+<h3 class="topic">
+<a name="3aust7cgrbpa55d89rfi0ea0ed">&nbsp;&nbsp;&nbsp;（1）、为表格显示增加HTML结构：</a>
+</h3>
+<h3 class="topic">
+<a name="3dh52pjfm0vth309rsfgmd1ksm">&nbsp;&nbsp;&nbsp;&nbsp;①、首先创建一个&lt;div&gt;表示整个表格，行和列要嵌套在这个&lt;div&gt;中。</a>
+</h3>
+<h3 class="topic">
+<a name="1pomft07vefp07ma4nc4rfa1ii">&nbsp;&nbsp;&nbsp;&nbsp;②、接下来，对于表格中的每一行，要创建一个&lt;div&gt;，其中包含行内容。</a>
+</h3>
+<h3 class="topic">
+<a name="13875ug3dpaq6i1a35fll59bcl">&nbsp;&nbsp;&nbsp;&nbsp;③、然后，对于每一列，只需要一个块元素作为该列内容。</a>
+</h3>
+<h3 class="topic">
+<a name="2j5dg91rn1c3geb8h0bvhv2ts0">&nbsp;&nbsp;&nbsp;（2）、为表格创建CSS样式：</a>
+</h3>
+<h3 class="topic">
+<a name="2l5ie9p37f8ibttbt9g7ofi85b">&nbsp;&nbsp;&nbsp;&nbsp;①、首先，为整个表格&lt;div&gt;增加样式：</a>
+</h3>
+<h3 class="topic">
+<a name="41krac0063qqpjbth99losg7ug">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display: table;</a>
+</h3>
+<h3 class="topic">
+<a name="5nc1ig9chhnhbs3sco4uflnr0m">&nbsp;&nbsp;&nbsp;&nbsp;②、接下来为每一行&lt;div&gt;增加样式（如果有多行，则需要多个行&lt;div&gt;）：display: table-row;</a>
+</h3>
+<h3 class="topic">
+<a name="5i5bofnvt8baa62q3n7bdioict">&nbsp;&nbsp;&nbsp;&nbsp;③、最后，为每一列&lt;div&gt;指定样式：display: table-cell;</a>
+</h3>
+<h3 class="topic">
+<a name="4n2qal8e8t7qqhsi1b06mdb43t">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*在列的CSS中，可以加入vertical-align:top;/middle;/bottom;来设置与单元格上边的对齐方式。如果不设置，默认为中间对齐。</a>
+</h3>
+<h3 class="topic">
+<a name="2ost4epulcplbb7eregc242k9k">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*可以使用width属性来控制列的宽度。（最好使用百分数的方式，因为使用百分数表格可以根据浏览器的大小自动调整扩展和收缩。且最好确保所有列宽度加在一起为100%）</a>
+</h3>
+<h3 class="topic">
+<a name="78dn3ag7kojnbfvt8brfas9vfi">&nbsp;六、关于布局的总结</a>
+</h3>
+<h3 class="topic">
+<a name="72naglbhks9urqt00f6aq4i8dv">&nbsp;&nbsp;1、浮动布局：</a>
+</h3>
+<h3 class="topic">
+<a name="7vj5nojufvq3tolmhafd57mmph">&nbsp;&nbsp;&nbsp;①、关键词：float、clear</a>
+</h3>
+<h3 class="topic">
+<a name="4cr5r9prda5dj3j4u5nunsngcc">&nbsp;&nbsp;&nbsp;②、缺点：这种方法有一个很大的缺点，我们必须把需要浮动的整个&lt;div&gt;移动到主页面之上，如果这种顺序并不反映页面内容的相对重要性，这种方法往往是最不优的。另外还有一个缺点，就是使用float无法创建两个高度相同的列。</a>
+</h3>
+<h3 class="topic">
+<a name="2hnql3e3miml8aa1i5p3ec8o4m">&nbsp;&nbsp;2、凝胶布局：</a>
+</h3>
+<h3 class="topic">
+<a name="26edksci7k0vde2a1n9a44vcd8">&nbsp;&nbsp;&nbsp;①、关键词：auto</a>
+</h3>
+<h3 class="topic">
+<a name="408e4hpsegn9jr9akn06q0sjqi">&nbsp;&nbsp;&nbsp;②、缺点：在于内容不会扩展来填满整个浏览器窗口。（不过很多人认为这不是一个缺点，你会看到有很多博客和Web页面都会采用这种凝胶设计）</a>
+</h3>
+<h3 class="topic">
+<a name="49v9lm132k8e8bdi8k0ke3id68">&nbsp;&nbsp;3、绝对布局：</a>
+</h3>
+<h3 class="topic">
+<a name="33ucgkaplnl96hb7oshbrvcd8b">&nbsp;&nbsp;&nbsp;①、原理：通过将边栏设置为一个特定的宽度，并将它固定在主内容右边，就有了一个可以岁页面大小扩展的收缩的主内容区，而边栏大小可以一直保持固定。</a>
+</h3>
+<h3 class="topic">
+<a name="1m0oaqdaathj87s74fjo8kqj75">&nbsp;&nbsp;&nbsp;②、缺点：浏览器变宽时，边栏会再次覆盖页脚。</a>
+</h3>
+<h3 class="topic">
+<a name="134hc3oovprhtj2l5ig64v998a">&nbsp;&nbsp;4、表格显示布局：</a>
+</h3>
+<h3 class="topic">
+<a name="6vur15gtv2r0pq634g2s5pmlgc">&nbsp;&nbsp;&nbsp;①、不是最佳选择，但却表现完美。</a>
+</h3>
+<h3 class="topic">
+<a name="4o41smerrd0ragpdonrjd3jtva">&nbsp;七、固定定位：</a>
+</h3>
+<h3 class="topic">
+<a name="1ptb50vp0fqbi7d5d81vetilbd">&nbsp;&nbsp;1、方法：position:fixed;  top/bottom:**px;  right/left:**px;</a>
+</h3>
+<h3 class="topic">
+<a name="3e18kqeqffo1hmbnkvk6v5ctlv">&nbsp;&nbsp;2、如何工作：一旦采用固定定位方式放置内容，他就会一直留在你原先指定的位置，不再移动，即使你滚动页面他也原地不动。</a>
+</h3>
+<h2 class="topic">
+<a name="2aq1m96jh1cqhviqcsm7agmd1i">12 HTML5标记&middot;现代HTML</a>
+</h2>
+<h3 class="topic">
+<a name="7pflfar43mhdnme6pr6q560dtg">&nbsp;一、新元素：</a>
+</h3>
+<h3 class="topic">
+<a name="31kr2kfvrcg2ocsdpc7cocl72a">&nbsp;&nbsp;*把一些没有意义的&lt;div id="**"&gt;换为更加有结构意义的元素</a>
+</h3>
+<h3 class="topic">
+<a name="5muo4d509m81fuebca3qqkv8o0">&nbsp;&nbsp;1、&lt;header&gt;：页眉</a>
+</h3>
+<h3 class="topic">
+<a name="3rntbrtgf8q9f1el69re4ljqn1">&nbsp;&nbsp;2、&lt;footer&gt;：页脚</a>
+</h3>
+<h3 class="topic">
+<a name="7tj26r60f5mudfq7rrsbi1j1ln">&nbsp;&nbsp;3、&lt;nav&gt;：导航</a>
+</h3>
+<h3 class="topic">
+<a name="1q0357fbv0auft40r40j8sg626">&nbsp;&nbsp;4、&lt;section&gt;：区段</a>
+</h3>
+<h3 class="topic">
+<a name="0rf6hoe0nkhg8q5jatdkgmps8q">&nbsp;&nbsp;5、&lt;article&gt;：定义文章 / 外部内容</a>
+</h3>
+<h3 class="topic">
+<a name="3e69phlrbrpulsd3m2obrutp2s">&nbsp;&nbsp;6、&lt;aside&gt;：边栏</a>
+</h3>
+<h3 class="topic">
+<a name="1n3l03hun7besli6as1jksbqsg">&nbsp;&nbsp;7、&lt;time&gt;：定义时间和日期</a>
+</h3>
+<h3 class="topic">
+<a name="01vkkh7oj3qbtm17m6nf3ig94r">&nbsp;&nbsp;&nbsp;①、如果元素内容没有采用官方Internet日期/时间格式来写，就必须有datetime属性。</a>
+</h3>
+<h3 class="topic">
+<a name="6dgj09oo3oa9b8nejleqm3ts48">&nbsp;&nbsp;&nbsp;②、datetime属性：&lt;time datetime="2012-02-18"&gt;2/18/2012&lt;/time&gt;</a>
+</h3>
+<h3 class="topic">
+<a name="4iq4ij3s8ueea15m3b5jb06rjp">&nbsp;&nbsp;*本章用到的HTML5新元素，在一些浏览器中可能并不支持。智能手机上会全部支持这些新元素。</a>
+</h3>
+<h2 class="topic">
+<a name="1b5ku7pv147ndpuhr9amu9nonb">13表格与更多列表</a>
+</h2>
+<h2 class="topic">
+<a name="6bs5fd76ssc4967b2o5lr591fv">14 HTML表单&middot;实现交互</a>
+</h2>
+<h2 class="topic">
+<a name="5slqv02vbbu6rof35vlua91tq3">15 附录：其他 &middot; 没有谈到的十大主题</a>
+</h2>
+</body>
+</html>
